@@ -1,0 +1,15 @@
+{
+    "name": "babslabs",
+    "version": "1.0.0",
+    "description": "BabsLabs Responsive Portfolio Website",
+    "main": "index.js",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    },
+    "author": "BabsLabs",
+    "license": "MIT",
+    "dependencies": {
+        "i": "^0.3.6",
+        "node-sass": "^4.11.0"
+    }
+}
