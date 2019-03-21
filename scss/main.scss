@@ -1,7 +1,9 @@
-// import mix ins scss
+// Import Mixins SCSS
 @import 'config';
-// import menu scss
+// Import Menu SCSS
 @import 'menu';
+// Import Mobile Media Query
+@import 'mobile';
 // Reset Box Sizing;
 * {
     box-sizing: border-box;
