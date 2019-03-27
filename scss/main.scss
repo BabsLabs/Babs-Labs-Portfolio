@@ -117,6 +117,45 @@ main {
     border: $secondary-color 1px solid;
 }
 
+// Portfolio and Projects Styles
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.7rem;
+    img {
+        width: 100%;
+        border: 3px $primary-color solid;
+        &:hover {
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+}
+
+// Button Styles
+.btn {
+    color: set-text-color($primary-color);
+    display: block;
+    border: 0;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 20);
+}
+
+.btn-light {
+    @extend .btn;
+    background: darken($primary-color, 5);
+}
+
 // Footer Styles
 #main-footer {
     text-align: center;
