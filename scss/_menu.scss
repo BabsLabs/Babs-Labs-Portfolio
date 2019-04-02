@@ -4,8 +4,9 @@
     z-index: 3;
     right: 35px;
     top: 35px;
-    border: 2px solid black;
+    border: 2px solid set-text-color($primary-color);
     border-radius: 3px;
+    background: $primary-color;
 }
 
 // Menu Button Styles
