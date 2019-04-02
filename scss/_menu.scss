@@ -10,7 +10,7 @@
     .btn-line {
         width: 28px;
         height: 3px;
-        margin: 0 0 5px 0;
+        margin: 5px 0 5px 0;
         background: set-text-color($primary-color);
         @include easeOut;
     }
@@ -40,7 +40,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
     visibility: hidden;
     // Show Nav Items
     &.show {
@@ -62,7 +61,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: rgba(darken($primary-color, 5), 0.9);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
@@ -73,7 +72,7 @@
     }
     // Picture Side Styles
     &-branding {
-        background: $primary-color;
+        background: rgba($primary-color, 0.9);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
         // Picture Side Show Styles To Come In From Bottom
@@ -109,7 +108,7 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         padding: 1rem 0;
-        font-weight: 400;
+        font-weight: 600;
         color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
