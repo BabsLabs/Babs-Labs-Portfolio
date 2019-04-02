@@ -1,9 +1,18 @@
-// Menu Button Styles
-.menu-btn {
+// Menu Border Styles
+.menu-border {
     position: absolute;
     z-index: 3;
     right: 35px;
     top: 35px;
+    border: 2px solid set-text-color($primary-color);
+    border-radius: 3px;
+    background: $primary-color;
+}
+
+// Menu Button Styles
+.menu-btn {
+    padding: 5px;
+    z-index: 4;
     cursor: pointer;
     @include easeOut;
     // Button Line Styles
