@@ -47,8 +47,12 @@
         }
     }
     .about-info {
-        grid-template-areas: 'bioimage' 'bio' 'job-1' 'job-2';
+        grid-template-areas: 'bioimage' 'bio' 'skills' 'job-1' 'job-2';
         grid-template-columns: 1fr;
+    }
+    .skills-grid {
+        display: grid;
+        grid-template-areas: 'very-familiar' 'familiar' 'somewhat-familiar';
     }
     .projects {
         grid-template-columns: repeat(2, 1fr);

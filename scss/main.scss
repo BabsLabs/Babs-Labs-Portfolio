@@ -40,7 +40,7 @@ h3 {
 }
 
 a {
-    color: #ffffff;
+    color: $primary-color;
     text-decoration: none;
 }
 
@@ -85,7 +85,7 @@ main {
     display: grid;
     text-align: left;
     grid-gap: 30px;
-    grid-template-areas: 'bioimage bio bio''job-1 job-1 job-2';
+    grid-template-areas: 'bioimage bio bio' 'skills skills skills' 'job-1 job-1 job-2';
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -98,6 +98,18 @@ main {
 
 .bio {
     grid-area: bio;
+}
+
+.skills {
+    grid-area: skills;
+    grid-template-columns: repeat(3, 1fr);
+    border: $secondary-color 1px solid;
+    padding: 0.75rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-areas: 'very-familiar familiar somewhat-familiar';
 }
 
 .job-1 {
@@ -161,7 +173,7 @@ main {
     margin-top: 1rem;
     div {
         font-size: 1.5rem;
-        border: 3px black solid;
+        border: 3px solid set-text-color($primary-color);
         padding: 1rem 2rem;
         margin-bottom: 3rem;
         @include easeOut;
