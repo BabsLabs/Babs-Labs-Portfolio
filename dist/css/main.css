@@ -175,7 +175,7 @@ main {
   display: grid;
   text-align: left;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job-1 job-2 job-3";
+  grid-template-areas: "bioimage bio bio" "job-1 job-1 job-2";
   grid-template-columns: repeat(3, 1fr); }
 
 .bio-image {
@@ -192,9 +192,6 @@ main {
 
 .job-2 {
   grid-area: job-2; }
-
-.job-3 {
-  grid-area: job-3; }
 
 .job {
   padding: 0.75rem;
@@ -289,7 +286,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job-1' 'job-2' 'job-3';
+    grid-template-areas: 'bioimage' 'bio' 'job-1' 'job-2';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
