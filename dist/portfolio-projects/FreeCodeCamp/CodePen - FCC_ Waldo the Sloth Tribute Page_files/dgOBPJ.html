@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://s.codepen.io/rastamypasta/fullpage/dgOBPJ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
+  <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111">
+  <title>CodePen - FCC: Waldo the Sloth Tribute Page</title>
+  
+  
+  
+  
+      <style>
+      @import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Josefin+Sans:400,600,700");
+
+/* variables*/
+:root {
+  --tanish: #d6f4bf;
+  --dk-tanish: #d2f0af;
+  --lt-greenish: #69ba73;
+  --dk-greenish: #166b46;
+  --navyish: #270b54;
+}
+
+/* body styles */
+body {
+  max-width: 2000px;
+  margin: auto;
+  background-color: var(--dk-tanish, tan);
+}
+
+/* font styles */
+h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 200%;
+  font-weight: 700;
+  padding: 0em 1em;
+}
+
+h3 {
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 175%;
+  font-weight: 700;
+}
+
+p,
+ul,
+li,
+a {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* main content styles */
+/* title */
+#title {
+  margin: 1em;
+  background-color: var(--dk-greenish, LightGreen);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-area: title;
+}
+
+#title h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 500%;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--tanish, black);
+  text-shadow: 4px 4px 0px var(--navyish, white);
+}
+
+#title h2 {
+  color: var(--tanish, black);
+  text-shadow: 3px 3px 0px var(--navyish, white);
+}
+
+/* story of how I met Waldo */
+#waldo-story {
+  background-color: var(--tanish, white);
+  padding: 1em 1em;
+  grid-area: waldo-story;
+}
+
+/* sloth picture */
+#img-div {
+  background-color: var(--lt-greenish, LightGreen);
+  padding-top: 1em;
+  margin: 1em;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: img-div;
+}
+
+#img-div p {
+  padding-top: 0em;
+}
+
+img {
+  display: block;
+  width: 75%;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* sloth facts */
+#tribute-info {
+  background-color: var(--tanish, white);
+  padding: 1em 1em;
+  grid-area: tribute-info;
+}
+
+#tribute-info li {
+  padding: 0.5em 0.5em;
+}
+
+/* wiki link */
+.wiki-link {
+  background-color: var(--lt-greenish, LightGreen);
+  color: var(--navyish, blue);
+  text-align: center;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  grid-area: wiki-link;
+}
+
+#tribute-link {
+  text-decoration: none;
+}
+
+/* sloth divider image */
+#sloth-divider {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/71/Choloepus_hoffmanni_%28Puerto_Viejo%2C_CR%29_crop.jpg");
+  background-color: DarkGreen;
+  background-position: center;
+  background-size: cover;
+  padding: 7em 0em;
+  margin: 1em 0em;
+  grid-area: sloth-divider;
+}
+
+/* sloth habitat */
+#map-area {
+  background-color: var(--tanish, white);
+  margin-bottom: 1em;
+  padding: 1em 1em 0em 1em;
+  grid-area: map-area;
+  display: grid;
+  grid-template: "map-facts" "map";
+}
+
+#map-facts {
+  grid-area: map-facts;
+}
+
+#map-facts p {
+  padding: 0em 1em;
+}
+
+#map {
+  padding-bottom: 1em;
+  grid-area: map;
+}
+
+/* megasloth */
+#megasloth-area {
+  background-color: var(--tanish, white);
+  margin-bottom: 1em;
+  padding: 1em 1em 0em 1em;
+  grid-area: megasloth-area;
+  display: grid;
+  grid-template: "megasloth-facts" "megasloth-map";
+}
+
+#megasloth-facts {
+  grid-area: megasloth-facts;
+}
+
+#megasloth-facts p {
+  padding: 0em 1em;
+}
+
+#megasloth-map {
+  padding-bottom: 1em;
+  grid-area: megasloth-map;
+}
+
+/* footer styles */
+footer {
+  background: var(--dk-greenish, darkgreen);
+  text-align: center;
+  padding: 1em;
+}
+
+footer a {
+  color: var(--dk-tanish, white);
+  text-decoration: none;
+}
+
+/* media query for medium screens*/
+@media only screen and (min-width: 600px) {
+  #main {
+    display: grid;
+    grid-template: "title img-div img-div" "waldo-story waldo-story waldo-story" "sloth-divider sloth-divider sloth-divider" "tribute-info tribute-info tribute-info" "wiki-link wiki-link wiki-link" "map-area map-area map-area" "megasloth-area megasloth-area megasloth-area";
+  }
+
+  #title h1 {
+    font-size: 800%;
+  }
+
+  /* turns off sloth image card and replaces it with big backgorund sloth image */
+  #image {
+    display: none;
+  }
+
+  .img-div-lg {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/Two_toed_sloth.JPG");
+    background-color: DarkGreen;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .img-div-lg p {
+    display: none;
+  }
+
+  /* sloth divider medium*/
+  #sloth-divider {
+    padding: 10em 0em;
+  }
+
+  /* sloth habitat medium */
+  #map-area {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template: "map-facts map";
+  }
+  
+    /* megasloth medium */
+  #megasloth-area {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template: "megasloth-map megasloth-facts";
+  }
+  
+  
+}
+
+/* media query for large screens */
+@media only screen and (min-width: 850px) {
+    #main {
+    display: grid;
+    grid-template: "title img-div img-div img-div" "waldo-story waldo-story waldo-story waldo-story" "sloth-divider sloth-divider sloth-divider sloth-divider" "tribute-info tribute-info map-area map-area" "wiki-link wiki-link wiki-link wiki-link" "megasloth-area megasloth-area megasloth-area megasloth-area";
+   grid-gap: 1em;
+  }
+} 
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+
+  <script src="./bundle.js.download"></script><div id="fcc_test_suite_wrapper" style="position: relative !important; z-index: 99999 !important;"></div>
+
+<title>Tribute Page</title>
+
+
+  <!-- Start of site -->
+  <div id="main">
+
+    <!-- Title Area -->
+    <div id="title">
+      <h1>Waldo</h1>
+      <h2>The Costa Rican Two-Toed Sloth</h2>
+    </div>
+
+    <!-- How I met Waldo Area -->
+    <div id="waldo-story">
+      <h3>The story of how I met Waldo on the side of the road in Costa Rica...</h3>
+      <p>I first met Waldo on a small side road in a small town called Limon on the Caribbean coast of Costa Rica. He was trying to scamper up a tree as fast as his two toes would take him and I was trying to get out camera in time to take a photograph of
+        him. Here I was like a paparazzi trying to catch the star before they escaped. Waldo was so close I could have reached out and touched him but something kept me from doing so, perhaps it was the green fuzz that appeared to be growing on him or
+        just the look in his eyes asking to be left alone, and so I stuck to photography.</p>
+      <p>Waldo was the first sloth I would see on that trip but he would not be the last.</p>
+    </div>
+
+    <!-- Image Area -->
+    <div id="img-div" class="img-div-lg">
+      <img id="image" src="./Two_toed_sloth.JPG" alt="">
+      <p id="img-caption">Pictured: A sloth that looks like Waldo - The Two Toed Sloth</p>
+    </div>
+
+    <!-- Tribute Info Area -->
+    <div id="tribute-info">
+      <h3>Here is a bit of info about these loveable little critters...<br>A.k.a. Sloth Facts</h3>
+      <ul>
+        <li>Two-Toed Sloths are usually bigger than their three toed sloth cousins.</li>
+        <li>Two toed sloths actually have two fingers in their hands and three in their toes.</li>
+        <li>Sloths cannot shiver to keep warm when they get cold. Good thing they live in warm areas.</li>
+        <li>Two toed sloths descend down vines and trees head first in contrast to three toed sloths which descend rump first.</li>
+        <li>Sloths are fantastic swimmers.</li>
+        <li>Sloths only use the bathroom for number two once a week.</li>
+      </ul>
+    </div>
+
+    <!-- Wikipedia area -->
+    <div class="wiki-link">
+      <a href="https://en.wikipedia.org/wiki/Two-toed_sloth" id="tribute-link" target="_blank">Additional Information on Two Toed Sloths can be found on Wikipedia.com</a>
+    </div>
+
+    <!-- Sloth divider -->
+    <div id="sloth-divider"></div>
+
+    <!-- Map area -->
+    <div id="map-area">
+      <div id="map-facts">
+        <h3>Sloth Habitat</h3>
+        <p>Two toed sloths can be found through the tropical rainforests of Central and South America. They are usually found among the forest canopy and prefer a habitat that is lush with vegetation so they have an abundance of twigs and plant life to dine
+          on. Sloths often prefer an environment next to water because despite their slow movement in the forest canopy they are excellent swimmers and enjoy an occasional dip in rivers or oceans.
+        </p>
+      </div>
+      <div id="map">
+        <a title="IUCN Red List of Threatened Species, species assessors and the authors of the spatial data. [CC BY-SA 3.0 
+ (https://creativecommons.org/licenses/by-sa/3.0
+)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Hoffmann%27s_Two-toed_Sloth_area.png"><img width="256" alt="Hoffmanns Two-toed Sloth area" src="./Hoffmann&#39;s_Two-toed_Sloth_area.png"></a>
+      </div>
+    </div>
+
+    <!-- Map area -->
+    <div id="megasloth-area">
+      <div id="megasloth-facts">
+        <h3>The Giant Ground Sloth</h3>
+        <p>Imagine a sloth the size of an elephant. It would be far too large to swing through the trees so instead it would have crawled through the jungle floor and utilize its gigantic claws for digging through the dirt and forging for food. That would
+          have been the Giant Ground sloth. These colossal sloths existed over 35 million years ago and are believed to have migrated up from the southern tip of South America all the way to the Appalachian areas of North America. Footprints found in
+          New Mexico show that prehistoric humans hunted the giant sloth during the ice age. Sadly, these magnificent behemoths went extinct around 11,000 years ago.</p>
+      </div>
+      <div id="megasloth-map">
+        <img width="256" alt="megasloth" src="./Megatherum_DB.jpg">
+      </div>
+    </div>
+
+    <!-- End of Main -->
+  </div>
+
+  <footer>
+    <a href="https://s.codepen.io/rastamypasta/fullpage/www.babslabs.com" target="_blank">© Babs Labs 2018</a>
+  </footer>
+
+
+
+
+    <script src="./stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js.download"></script>
+
+  
+  
+
+    <script>
+      // !! IMPORTANT README:
+
+// You may add additional external JS and CSS as needed to complete the project, however the current external resource MUST remain in place for the tests to work. BABEL must also be left in place. 
+
+/***********
+INSTRUCTIONS:
+  - Select the project you would 
+    like to complete from the dropdown 
+    menu.
+  - Click the "RUN TESTS" button to
+    run the tests against the blank 
+    pen.
+  - Click the "TESTS" button to see 
+    the individual test cases. 
+    (should all be failing at first)
+  - Start coding! As you fulfill each
+    test case, you will see them go   
+    from red to green.
+  - As you start to build out your 
+    project, when tests are failing, 
+    you should get helpful errors 
+    along the way!
+    ************/
+
+// PLEASE NOTE: Adding global style rules using the * selector, or by adding rules to body {..} or html {..}, or to all elements within body or html, i.e. h1 {..}, has the potential to pollute the test suite's CSS. Try adding: * { color: red }, for a quick example!
+
+// Once you have read the above messages, you can delete all comments. 
+"use strict";
+      //# sourceURL=pen.js
+    </script>
+
+
+
+  
+  
+
+  <script src="./css_reload-2a5c7ad0fe826f66e054c6020c99c1e1c63210256b6ba07eb41d7a4cb0d0adab.js.download"></script>
+
+
+
+ 
+</body></html>
